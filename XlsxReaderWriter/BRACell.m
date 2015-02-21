@@ -182,10 +182,10 @@
     
     BRASharedString *sharedString = [[BRASharedString alloc] initWithAttributedString:[[NSAttributedString alloc] initWithString:stringValue]
                                                                              inStyles:_worksheet.styles];
-    [_worksheet.sharedStrings addSharedString:sharedString];
+    NSInteger addedIndex = [_worksheet.sharedStrings addSharedString:sharedString];
     _type = BRACellContentTypeSharedString;
     _value = nil;
-    _sharedStringIndex = [_worksheet.sharedStrings.sharedStrings indexOfObject:sharedString];
+    _sharedStringIndex = addedIndex; //[_worksheet.sharedStrings.sharedStrings indexOfObject:sharedString];
     _dateValue = nil;
     _error = NO;
 }

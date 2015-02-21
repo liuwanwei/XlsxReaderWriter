@@ -21,10 +21,10 @@
 		4580C6961A15163A00790ED5 /* BRAMergeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6951A15163A00790ED5 /* BRAMergeCell.m */; };
 		4580C6991A15164600790ED5 /* BRAColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6981A15164600790ED5 /* BRAColumn.m */; };
 		4580C69C1A15165100790ED5 /* BRARow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C69B1A15165100790ED5 /* BRARow.m */; };
-		4580C69F1A15165D00790ED5 /* BRACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C69E1A15165D00790ED5 /* BRACell.m */; };
+		4580C69F1A15165D00790ED5 /* BRACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C69E1A15165D00790ED5 /* BRACell.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4580C6A21A15167400790ED5 /* BRACellFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6A11A15167400790ED5 /* BRACellFill.m */; };
 		4580C6A51A15167D00790ED5 /* BRACellFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6A41A15167D00790ED5 /* BRACellFormat.m */; };
-		4580C6A81A15168A00790ED5 /* BRANumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6A71A15168900790ED5 /* BRANumberFormat.m */; };
+		4580C6A81A15168A00790ED5 /* BRANumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6A71A15168900790ED5 /* BRANumberFormat.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		4580C6AB1A15169100790ED5 /* BRAStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6AA1A15169100790ED5 /* BRAStyles.m */; };
 		4580C6B01A1516A500790ED5 /* BRASharedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6AD1A1516A500790ED5 /* BRASharedString.m */; };
 		4580C6B11A1516A500790ED5 /* BRASharedStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6AF1A1516A500790ED5 /* BRASharedStrings.m */; };
@@ -39,7 +39,7 @@
 		4580C6D31A15171B00790ED5 /* NSDictionary+DeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6CE1A15171B00790ED5 /* NSDictionary+DeepCopy.m */; };
 		4580C6D41A15171B00790ED5 /* NSDictionary+OpenXMLDictionaryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6D01A15171B00790ED5 /* NSDictionary+OpenXMLDictionaryParser.m */; };
 		4580C6D51A15171B00790ED5 /* NSDictionary+OpenXmlString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6D21A15171B00790ED5 /* NSDictionary+OpenXmlString.m */; };
-		4580C6D81A15176A00790ED5 /* BRAOfficeDocumentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6D71A15176A00790ED5 /* BRAOfficeDocumentPackage.m */; };
+		4580C6D81A15176A00790ED5 /* BRAOfficeDocumentPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4580C6D71A15176A00790ED5 /* BRAOfficeDocumentPackage.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		45B6E2461A148F7500288A78 /* libXlsxReaderWriter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B6E23A1A148F7500288A78 /* libXlsxReaderWriter.a */; };
 		45B6E26D1A15063800288A78 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B6E26C1A15063800288A78 /* XMLDictionary.m */; };
 		45B6E2FC1A15099000288A78 /* photo-1415226481302-c40f24f4d45e.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 45B6E2F91A15099000288A78 /* photo-1415226481302-c40f24f4d45e.jpeg */; };
@@ -892,6 +892,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Coverage;
 		};
@@ -975,6 +976,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1008,6 +1010,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

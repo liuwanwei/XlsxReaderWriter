@@ -45,11 +45,14 @@
     }
 }
 
-- (void)addSharedString:(BRASharedString *)sharedString {
+- (NSInteger)addSharedString:(BRASharedString *)sharedString {
     NSMutableArray *sharedStrings = _sharedStrings.mutableCopy;
     [sharedStrings addObject:sharedString];
     
     _sharedStrings = sharedStrings;
+    
+    // 返回添加到的位置
+    return (_sharedStrings.count - 1);
 }
 
 - (void)setStyles:(BRAStyles *)styles {

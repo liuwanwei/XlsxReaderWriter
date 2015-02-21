@@ -177,14 +177,16 @@
 }
 
 - (BRACell *)cellForCellReference:(NSString *)cellReference shouldCreate:(BOOL)shouldCreate {
-    NSUInteger cellIndex = [_cells indexOfObjectPassingTest:^BOOL(BRACell *cell, NSUInteger idx, BOOL *stop) {
-        if ([cell.reference isEqual:cellReference]) {
-            *stop = YES;
-            return YES;
-        }
-        return NO;
-    }];
-    
+    NSUInteger cellIndex = NSNotFound;
+    if (!shouldCreate) {
+        cellIndex = [_cells indexOfObjectPassingTest:^BOOL(BRACell *cell, NSUInteger idx, BOOL *stop) {
+            if ([cell.reference isEqual:cellReference]) {
+                *stop = YES;
+                return YES;
+            }
+            return NO;
+        }];
+    }
 
     if (cellIndex != NSNotFound) {
         return _cells[cellIndex];
@@ -211,7 +213,8 @@
     NSInteger __block maxRowIndex = 0;
     
     //indexes of objects in _rows are not the same as their own rowIndex
-    NSUInteger rowIndexInRows = [_rows indexOfObjectPassingTest:^BOOL(BRARow *obj, NSUInteger idx, BOOL *stop) {
+    NSUInteger rowIndexInRows = NSNotFound;
+    rowIndexInRows  = [_rows indexOfObjectPassingTest:^BOOL(BRARow *obj, NSUInteger idx, BOOL *stop) {
         maxRowIndex = MAX(obj.rowIndex, maxRowIndex);
         if (obj.rowIndex == rowIndexToFind) {
             *stop = YES;

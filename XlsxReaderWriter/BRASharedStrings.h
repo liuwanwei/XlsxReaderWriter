@@ -13,7 +13,7 @@
 
 @interface BRASharedStrings : BRARelationship
 
-- (void)addSharedString:(BRASharedString *)sharedString;
+- (NSInteger)addSharedString:(BRASharedString *)sharedString;
 
 @property (nonatomic, weak) BRAStyles *styles;
 @property (nonatomic, strong) NSArray *sharedStrings;
